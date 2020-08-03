@@ -18,9 +18,11 @@
 
 #pragma once
 
+#ifndef OS_GENERIC
 #include <android/bluetooth/hci/enums.pb.h>
-#include <bta/include/bta_api.h>
 #include <frameworks/base/core/proto/android/bluetooth/enums.pb.h>
+#endif // !OS_GENERIC
+#include <bta/include/bta_api.h>
 #include <stdint.h>
 #include <memory>
 #include <string>
