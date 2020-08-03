@@ -21,7 +21,7 @@ static_library("types") {
 
   sources = [
     "bluetooth/uuid.cc",
-    "le_address.cc",
+    "class_of_device.cc",
     "raw_address.cc",
   ]
 
@@ -37,6 +37,7 @@ static_library("types") {
 executable("types_unittests") {
   testonly = true
   sources = [
+    "test/class_of_device_unittest.cc",
     "test/raw_address_unittest.cc",
     "test/bluetooth/uuid_unittest.cc",
   ]

@@ -16,10 +16,12 @@
 
 static_library("common") {
   sources = [
+    "address_obfuscator.cc",
     "message_loop_thread.cc",
-    "metrics_linux.cc",
+    "metrics.cc",
+    "once_timer.cc",
+    "repeating_timer.cc",
     "time_util.cc",
-    "timer.cc",
   ]
 
   include_dirs = [
@@ -37,10 +39,15 @@ static_library("common") {
 executable("bt_test_common") {
   testonly = true
   sources = [
+    "address_obfuscator_unittest.cc",
     "leaky_bonded_queue_unittest.cc",
+    "message_loop_thread_unittest.cc",
+    "metrics_unittest.cc",
+    "once_timer_unittest.cc",
+    "repeating_timer_unittest.cc",
     "state_machine_unittest.cc",
     "time_util_unittest.cc",
-    "timer_unittest.cc"
+    "id_generator_unittest.cc",
   ]
 
   include_dirs = [
