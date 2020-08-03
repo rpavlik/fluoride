@@ -28,10 +28,10 @@ config("clang_config") {
     "/usr/include/libcxxabi",
   ]
   cflags_cc = [
-    "-stdlib=libc++",
+    # "-stdlib=libc++",
   ]
   ldflags = [
-    "-stdlib=libc++",
+    # "-stdlib=libc++",
   ]
 }
 
