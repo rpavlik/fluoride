@@ -19,6 +19,7 @@
 
 #include <stdint.h>
 #include <vector>
+#include <memory>
 #include "bt_common_types.h"
 #include "bt_gatt_client.h"
 #include "bt_gatt_types.h"
