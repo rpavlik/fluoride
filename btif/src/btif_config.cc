@@ -31,7 +31,9 @@
 #include <string>
 #include <unordered_map>
 
+#ifndef OS_GENERIC
 #include <private/android_filesystem_config.h>
+#endif // !OS_GENERIC
 
 #include <openssl/rand.h>
 
@@ -98,7 +100,11 @@ static bool config_checksum_pass(int check_bit) {
   return ((get_niap_config_compare_result() & check_bit) == check_bit);
 }
 static bool btif_is_niap_mode() {
+#if defined(OS_GENERIC)
+  return is_niap_mode();
+#else   // !defined(OS_GENERIC)
   return getuid() == AID_BLUETOOTH && is_niap_mode();
+#endif  // defined(OS_GENERIC)
 }
 static bool btif_in_encrypt_key_name_list(std::string key);
 
