@@ -25,7 +25,7 @@ if clang_path:
     clang_version_major = int(clang_version_array[0])
     clang_version_minor = int(clang_version_array[1])
 
-if clang_version_major >= 3 and clang_version_minor >= 5:
+if clang_version_major > 3 or (clang_version_major == 3 and clang_version_minor >= 5):
     print ""
 else:
     # Loop in support clang version only
