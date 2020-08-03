@@ -47,7 +47,7 @@ if [ ! -z "$CLANG_PACKAGE" ]; then
 fi
 
 sudo apt-get -y install $CLANG_PACKAGE libevent-dev libc++-dev libc++abi-dev \
-                        ninja-build
+                        ninja-build libcap-dev
 gn_path=`which gn`
 if [ -z $gn_path ]; then
   gnsha1=$(curl $GNSHA1_URL | base64 -d)
