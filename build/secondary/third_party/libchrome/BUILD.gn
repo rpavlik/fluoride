@@ -242,6 +242,14 @@ config("libchrome_config") {
     "/usr/include/dbus-1.0/",
     "/usr/lib/x86_64-linux-gnu/dbus-1.0/include",
  ]
+ defines = [
+    "__ANDROID_HOST__=1",
+ ]
+ cflags = [
+   "-Wno-implicit-const-int-float-conversion",
+   "-Wno-non-c-typedef-for-linkage",
+   "-Wno-defaulted-function-deleted",
+ ]
 }
 
 static_library("base") {
