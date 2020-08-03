@@ -62,6 +62,14 @@ ln -s ../../../external/tinyxml2 tinyxml2
 ln -s ../../../external/googletest googletest
 ```
 
+You will also need to remove one file from upstream:
+
+```sh
+cd ~/fluoride/bt
+rm third-party/libchrome/BUILD.gn
+```
+
+
 ### Generate your build files
 
 ```sh
