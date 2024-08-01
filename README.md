@@ -1,5 +1,11 @@
 # Fluoride Bluetooth stack
 
+## Project Status
+
+Incomplete and outdated. It is worthwhile work, but I lack the capacity to maintain this in any reasonable sense.
+
+Please feel free to fork it, build on it, etc. My work on this was pretty brief and limited so I am unlikely to be of much assistance.
+
 ## Building and running on AOSP
 Just build AOSP - Fluoride is there by default.
 
